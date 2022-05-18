@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Gotham Narrow Bold';
+	src: url('/fonts/Gotham Narrow Bold.otf');
+}
+
+@font-face {
+	font-family: 'Gotham Narrow Book';
+	src: url('/fonts/Gotham Narrow Book.otf');
+}
+
+@font-face {
+	font-family: 'Gotham Thin';
+	src: url('/fonts/Gotham Thin.otf');
+}
+
+* {
+  cursor: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  @apply overflow-x-hidden;
+}
+
+body {
+  @apply bg-amaterasu-black text-white overflow-x-hidden;
+  cursor: none;
+  scrollbar-width: thin;
+  scrollbar-color: #6969dd #e0e0e0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-amaterasu-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-amaterasu-light-gray;
+}
+
+nav {
+  @apply text-white font-gotham-narrow-book text-lg border-b border-opacity-30 border-gray-med-custom;
+}
+
+footer {
+  @apply flex items-center;
+}
+
+h1 {
+  @apply uppercase text-amaterasu-white font-gotham-narrow-bold;
+  font-size: 40px;
+}
+
+h2 {
+  @apply text-2xl font-gotham-narrow-bold;
+}
+
+p {
+  @apply text-lg font-gotham-narrow-book;
+}
+
+section {
+  @apply my-10;
+}
+
+.pointer {
+  @apply invisible absolute rounded-full w-8 h-8 pointer-events-none -ml-4 -mt-4 z-50;
+  backdrop-filter: invert(100%);
+}
+
+.index {
+  @apply text-gray-custom font-gotham-thin inline-block transform rotate-90 text-xl;
+}
+
+/* membresia */
+
+#membresia h2 {
+  @apply font-gotham-narrow-bold text-2xl;
+}
+
+#membresia li > h3 {
+  @apply text-sm py-1;
+}
+
+#membresia li > p {
+  @apply text-sm pl-4 leading-7;
+}
+
+/*  */
+.price {
+  font-family: 'Roboto Mono', monospace;
+  @apply text-xl text-amaterasu-light-gray;
+}
+
+.modal li ul {
+  list-style: none;
+  list-style-position: outside;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  section {
+    @apply my-36;
+  }
+
+  nav {
+    @apply p-6 pr-16;
+  }
+
+  .pointer {
+    @apply visible;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff !important;
+    @apply rounded-full bg-black border border-white border-opacity-20 !w-10 !h-10;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 12px !important;
+}
