@@ -116,7 +116,7 @@ section {
   }
 
   nav {
-    @apply p-6 pr-16;
+    @apply p-6 pr-16 border-none;
   }
 
   .pointer {
