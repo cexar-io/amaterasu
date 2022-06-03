@@ -1,8 +1,9 @@
 <script>
-  import { onMount } from 'svelte';
+  // @ts-nocheck
   import AOS from 'aos';
   import 'aos/dist/aos.css';
 
+  import { onMount } from 'svelte';
   import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
   import { Swiper, SwiperSlide } from 'swiper/svelte';
   import 'swiper/css';
@@ -10,14 +11,15 @@
   import 'swiper/css/pagination';
   import 'swiper/css/scrollbar';
 
-  import Pointer from '../lib/components/Pointer.svelte';
-  import Nav from '../lib/components/Nav.svelte';
-  import FloatingButton from '../lib/components/FloatingButton.svelte';
-  import Visualizer from '../lib/components/Visualizer.svelte';
-  import Modal from '../lib/components/Modal.svelte';
-  import Footer from '../lib/components/Footer.svelte';
+  import Pointer from '$lib/components/Pointer.svelte';
+  import Nav from '$lib/components/Nav.svelte';
+  import FloatingButton from '$lib/components/FloatingButton.svelte';
+  import Visualizer from '$lib/components/Visualizer.svelte';
+  import Modal from '$lib/components/Modal.svelte';
+  import Footer from '$lib/components/Footer.svelte';
 
   let open = false;
+  let container;
 
   onMount(() => {
     AOS.init();
@@ -28,7 +30,7 @@
 <Nav/>
 <FloatingButton/>
 
-<main>
+<main bind:this={container}>
   <div class="lg:container mx-auto px-10 md:px-20">
     <!-- intro -->
     <section></section>
@@ -98,11 +100,44 @@
         <p class="mb-6">Amaterasu Society es ese lugar al que se llega luego de atravesar la oscuridad de la cueva, un lugar desde donde la deidad observa y controla quién es digno de iluminarse junto a ella.</p>
         <p class="mb-6">Tenemos preparados beneficios especiales para que seas parte de un lugar que te haga sentir único:</p>
       </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 md:gap-y-0">
+        <div class="col-span-2 hidden md:block">
+          <hr class="border border-white border-opacity-5 my-10">
+        </div>
+        <div data-aos="fade-down" data-aos-duration="1000">
+          <h2 class="uppercase font-gotham-narrow-bold text-2xl mb-4 mt-10 md:mt-0">Beneficios</h2>
+          <ul class="font-gotham-narrow-book text-base opacity-40 list-square list-outside ml-4">
+            <li class="mb-2">Menú preferencial: solo aquellos que formen parte de Amaterasu probarán nuestra cocina digna de nuestra diosa.</li>
+            <li class="mb-2">Tragos de Bienvenida</li>
+            <li class="mb-2">Acceso a toda la carta de comida, incluyendo de Himitsu Kichi</li>
+            <li class="mb-2">Cócteles de autor: combinaciones de sabores creadas solo para quienes se animen a ser parte de este espacio.</li>
+            <li class="mb-2">Invitaciones a catas y eventos: nos gusta honrar la vuelta de la vida con distintas propuestas para nuestros miembros.</li>
+            <li class="mb-2">Entradas a los bares amigos de casa: en Amaterasu queremos que nuestros miembros celebren, estamos creando una red de reciprocidad no solamente en Argentina, sino también a nivel mundial. El listado está habilitado en el portal de miembros.</li>
+            <li class="mb-2">Acceso a locker de whisky en el bar</li>
+            <li class="mb-2">Participación en el club de inversores web 3.0: 20% de las ganancias de NFT serán invertidas en otros proyectos y dividir ganancias en partes iguales con los otros miembros. </li>
+            <li class="mb-2">12% de descuento en Himitsu y Amaterasu</li>
+            <li class="mb-2">Acceso a evento anual de Amaterasu para miembros y programa de viaje a Japón.</li>
+          </ul>
+        </div>
+        <div class="flex flex-col justify-center" data-aos="fade-up" data-aos-duration="1000">
+          <h2 class="uppercase font-gotham-narrow-bold text-2xl mb-4">Beneficios extras para <span class=" text-amaterasu-brown">Legendarios</span></h2>
+          <ul class="font-gotham-narrow-book text-base opacity-40 list-square list-outside ml-4">
+            <li class="mb-2">Botella de whisky Japonés de regalo.</li>
+            <li class="mb-2">Una cena anual en Himitsu armada por nuestro Itamae</li>
+            <li class="mb-2">Cierre de Amaterasu para el/la miembro y amigos una vez por año.</li>
+            <li class="mb-2">20% de descuento en consumos.</li>
+            <li class="mb-2">Acceso VIP al evento anual y programa de viaje a Japón.</li>
+          </ul>
+        </div>
+      </div>
 
       <hr class="border border-white border-opacity-5 my-10">
 
-      <h2 class="font-gotham-thin text-3xl text-white opacity-50 mb-6" data-aos="fade-left" data-aos-duration="1000">
+      <h2 class="font-gotham-thin text-xl text-white opacity-50 mb-3" data-aos="fade-left" data-aos-duration="1000">
         SERIE #1
+      </h2>
+      <h2 class="mb-6 text-4xl" data-aos="fade-right" data-aos-duration="1000">
+        Shinkokuna Kaeru <span class=" opacity-20 text-lg">(sapos serios)</span>
       </h2>
       <div data-aos="fade-right" data-aos-duration="1000">
         <p class="mb-6">En la cultura japonesa, el sapo simboliza el regreso de la buena energía, la riqueza y la felicidad.</p>

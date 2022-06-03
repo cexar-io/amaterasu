@@ -14,6 +14,7 @@
   on:mouseenter={toggleShow}
   on:mouseleave={toggleShow}>
   {#if show}
+    <!--
     <button
       type="button"
       class="absolute px-3 border rounded-full font-gotham-thin top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -21,6 +22,7 @@
       on:click>
       Beneficios
     </button>
+    -->
     <div class="absolute w-full h-12 bottom-0 bg-gray-med-custom flex items-center px-3" transition:fade={{ duration: 1000 }}>
       <div class="price grow">
         {price}Ξ

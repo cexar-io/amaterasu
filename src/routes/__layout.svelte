@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
-	import { settings } from './../utilities/settings';
+	import { settings } from '$lib/utilities/settings';
 </script>
 
 <svelte:head>
