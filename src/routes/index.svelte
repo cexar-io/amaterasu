@@ -3,7 +3,9 @@
   import AOS from 'aos';
   import 'aos/dist/aos.css';
 
+  import { settings } from '$lib/utilities/settings';
   import { onMount } from 'svelte';
+  import { fade } from 'svelte/transition';
   import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
   import { Swiper, SwiperSlide } from 'swiper/svelte';
   import 'swiper/css';
@@ -20,10 +22,22 @@
 
   let open = false;
   let container;
+  let assets = getAssets();
 
-  onMount(() => {
+  onMount(async () => {
     AOS.init();
   });
+
+  async function getAssets() {
+    const response = await fetch(`${settings.api}/assets?asset_contract_address=${settings.asset}&limit=50&order_direction=desc&offset=0&include_orders=false`)
+    const json = await response.json();
+
+    if (response.ok) {
+      return json;
+    } else {
+      throw new Error(json);
+    }
+  }
 </script>
 
 <Pointer/>
@@ -148,27 +162,31 @@
       </div>
 
       <!-- nft list -->
-      <div class="grid-cols-1 md:grid-cols-5 mt-36 gap-6 mb-20 hidden md:grid">
-        {#each Array(30) as _}
-          <Visualizer on:click={() => { open = true }}/>
-        {/each}
-      </div>
-
-      <!--  -->
-      <div class="md:hidden">
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={20}
-          slidesPerView={1}
-          navigation
-          >
-          {#each Array(30) as _}
-            <SwiperSlide>
-              <Visualizer on:click={() => { open = true }}/>
-            </SwiperSlide>
+      {#await assets}
+        <div class="w-full flex items-center justify-center">
+          <img src="/images/spinner.svg" alt="" in:fade>
+        </div>
+      {:then assets}
+        <div class="grid-cols-1 md:grid-cols-5 mt-36 gap-6 mb-20 hidden md:grid">
+          {#each assets.assets as asset}
+            <Visualizer {...asset} on:click={() => { open = true }}/>
           {/each}
-        </Swiper>
-      </div>
+        </div>
+        <div class="md:hidden">
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            >
+            {#each assets.assets as asset}
+              <SwiperSlide>
+                <Visualizer {...asset} on:click={() => { open = true }}/>
+              </SwiperSlide>
+            {/each}
+          </Swiper>
+        </div>
+      {/await}
 
       <!-- que son -->
       <div class="text-center mt-10 md:mt-0">

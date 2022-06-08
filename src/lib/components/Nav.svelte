@@ -8,13 +8,12 @@
     { text: 'nft', link: '#nft' }
   ]
 
-
   function toggleSidebar() {
     show = !show;
   }
 </script>
 
-<nav>
+<nav class="w-full">
   <div class="w-full">
     <div class="flex items-center">
       <div class="grow md:flex">

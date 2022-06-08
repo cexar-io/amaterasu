@@ -48,7 +48,7 @@ body {
 }
 
 nav {
-  @apply text-white font-gotham-narrow-book text-lg border-b border-opacity-30 border-gray-med-custom;
+  @apply text-white font-gotham-narrow-book text-lg border-b border-opacity-30 border-gray-med-custom sticky top-0;
 }
 
 footer {
