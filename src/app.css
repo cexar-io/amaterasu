@@ -134,3 +134,7 @@ section {
 .swiper-button-prev:after {
   font-size: 12px !important;
 }
+
+.swiper-slide {
+  background: rgb(10 10 13) !important;
+}
