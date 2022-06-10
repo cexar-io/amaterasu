@@ -21,7 +21,6 @@
   import Footer from '$lib/components/Footer.svelte';
 
   let open = false;
-  let container;
   let assets = getAssets();
 
   onMount(async () => {
@@ -44,7 +43,7 @@
 <Nav/>
 <FloatingButton/>
 
-<main bind:this={container}>
+<main>
   <div class="lg:container mx-auto px-10 md:px-20">
     <!-- intro -->
     <section></section>
