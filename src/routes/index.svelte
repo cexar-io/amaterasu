@@ -37,7 +37,7 @@
         const assetJson = await assetResponse.json();
 
         if (assetResponse.ok)
-          asset.price = assetJson.collection.payment_tokens.filter(token => token.symbol === 'ETH')[0].eth_price;
+          json.assets.filter(filteredAsset => filteredAsset.token_id === asset.token_id)[0].price = assetJson.collection.payment_tokens.filter(token => token.symbol === 'ETH')[0].eth_price;
       });
 
       return json;
