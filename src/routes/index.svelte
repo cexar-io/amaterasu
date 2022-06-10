@@ -32,6 +32,14 @@
     const json = await response.json();
 
     if (response.ok) {
+      json.assets.map(async asset => {
+        const assetResponse = await fetch(`${settings.api}/asset/${settings.asset}/${asset.token_id}/`);
+        const assetJson = await assetResponse.json();
+
+        if (assetResponse.ok)
+          asset.price = assetJson.collection.payment_tokens.filter(token => token.symbol === 'ETH')[0].eth_price;
+      });
+
       return json;
     } else {
       throw new Error(json);

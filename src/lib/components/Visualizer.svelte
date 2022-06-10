@@ -6,9 +6,9 @@
   export let collection = {};
   export let permalink = '';
   export let owner = {};
+  export let price = 0;
 
   let show = false;
-  let price = 0.01;
 
   function toggleShow() {
     show = !show;
