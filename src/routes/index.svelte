@@ -63,9 +63,9 @@
       </h1>
       <h2 class="mb-6" data-aos="fade-right" data-aos-duration="1000">La leyenda de la diosa del sol, Amaterasu</h2>
       <p class="mb-10" data-aos="fade-right" data-aos-duration="1000">Amaterasu, diosa del Sol, irritada por los celos de su hermano, decidió esconderse en una cueva y cubrir la entrada con una gran piedra. Esa terrible decisión desató la noche eterna en el Cielo y en la Tierra.</p>
-      <img src="/images/bar-1.jpg" alt="" class="mb-10" data-aos="fade-left" data-aos-duration="1000">
+      <img src="/images/bar-1.png" alt="" class="mb-10" data-aos="fade-left" data-aos-duration="1000">
       <p class="mb-10" data-aos="fade-right" data-aos-duration="1000">Sumidos en la oscuridad y el caos, otros dioses se unieron para idear un plan y así liberar a la diosa del encierro. Colocaron árboles cubiertos de joyas delante de la cueva, encendieron hogueras e hicieron que la diosa de la Danza, Uzume, bailara. El estrépito causado por el baile, las risas y los gritos hizo que Amaterasu, llena de curiosidad, abriera la puerta de la cueva para ver qué sucedía en su ausencia.</p>
-      <img src="/images/bar-2.jpg" alt="" class="mb-10" data-aos="fade-left" data-aos-duration="1000">
+      <img src="/images/bar-2.png" alt="" class="mb-10" data-aos="fade-left" data-aos-duration="1000">
       <p class="mb-6" data-aos="fade-up" data-aos-duration="1000">Cuando se asomó, se encontró de frente a un espejo que le mostró su brillante reflejo, el cual nunca había visto antes, y la imagen de su propio brillo la sorprendió tanto que los demás dioses aprovecharon la distracción para cerrar la puerta de la cueva y convencerla de regresar para terminar con las tinieblas que gobernaban el mundo.</p>
       <p class="mb-6" data-aos="fade-up" data-aos-duration="1000">Inspirados por la gran celebración que terminó con la oscuridad y devolvió la luz al mundo, sin olvidarnos del concepto de la planta baja, creamos AMATERASU.</p>
       <p class="mb-6" data-aos="fade-up" data-aos-duration="1000">Buscamos la máxima exclusividad para quienes hablen nuestro mismo idioma y gocen de nuestras costumbres.</p>
@@ -80,7 +80,7 @@
       </h1>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div class="md:col-span-2">
-          <img src="/images/membresia.jpg" alt="" class="w-full" data-aos="fade-right"  data-aos-duration="1000">
+          <img src="/images/membresia.png" alt="" class="w-full" data-aos="fade-right"  data-aos-duration="1000">
         </div>
         <div data-aos="fade-left"  data-aos-duration="1000">
           <p class="text-sm leading-7">Queremos premiar a nuestros clientes con un lugar de disfrute privilegiado, un espacio en donde se ofrecen productos exclusivos, acceso ilimitado y menús pensados para quienes quieran gozar de un momento único.</p>

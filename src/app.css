@@ -29,10 +29,11 @@ html {
 }
 
 body {
-  @apply bg-amaterasu-black text-white overflow-x-hidden;
+  @apply bg-black text-white overflow-x-hidden bg-no-repeat bg-contain;
   cursor: none;
   scrollbar-width: thin;
   scrollbar-color: #6969dd #e0e0e0;
+  background-image: url('/images/bg-3.png');
 }
 
 ::-webkit-scrollbar {
