@@ -80,7 +80,22 @@
       </h1>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div class="md:col-span-2">
-          <img src="/images/membresia.png" alt="" class="w-full" data-aos="fade-right"  data-aos-duration="1000">
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            >
+            <SwiperSlide>
+              <img src="/images/membresia-1.png" alt="" class="w-full" data-aos="fade-right"  data-aos-duration="1000">
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/membresia-2.png" alt="" class="w-full" data-aos="fade-right"  data-aos-duration="1000">
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/membresia-3.png" alt="" class="w-full" data-aos="fade-right"  data-aos-duration="1000">
+            </SwiperSlide>
+          </Swiper>
         </div>
         <div data-aos="fade-left"  data-aos-duration="1000">
           <p class="text-sm leading-7">Queremos premiar a nuestros clientes con un lugar de disfrute privilegiado, un espacio en donde se ofrecen productos exclusivos, acceso ilimitado y menús pensados para quienes quieran gozar de un momento único.</p>
