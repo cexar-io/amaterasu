@@ -1,6 +1,7 @@
 export const settings = {
-  api: 'https://testnets-api.opensea.io/api/v1',
-  title: 'Amaterasu',
-  asset: '0x5ddd592791d0c2260d6105879c1ff17ad74e1d42',
-  owner: '0xa0Ebf87De04fF8185575E59ec907bA1D329eb83a'
+  api: import.meta.env.VITE_API_URL,
+  apiKey: import.meta.env.VITE_API_KEY,
+  title: import.meta.env.VITE_SITE_TITLE,
+  asset: import.meta.env.VITE_NFT_CONTRACT,
+  owner: import.meta.env.VITE_NFT_OWNER
 }

@@ -28,12 +28,21 @@
   });
 
   async function getAssets() {
-    const response = await fetch(`${settings.api}/assets?asset_contract_address=${settings.asset}&limit=50&order_direction=desc&offset=0&include_orders=false`)
+    // let headers = {};
+
+    // if (settings.apiKey)
+    //   headers = { 'x-api-key': settings.apiKey }
+
+    const response = await fetch(`${settings.api}/assets?asset_contract_address=${settings.asset}&limit=50&order_direction=desc&offset=0&include_orders=false`, {
+			headers: { 'x-api-key': settings.apiKey }
+    });
     const json = await response.json();
 
     if (response.ok) {
       json.assets.map(async asset => {
-        const assetResponse = await fetch(`${settings.api}/asset/${settings.asset}/${asset.token_id}/`);
+        const assetResponse = await fetch(`${settings.api}/asset/${settings.asset}/${asset.token_id}/`, {
+          headers: { 'x-api-key': 'b959e0131e524da7a64e8e034ab46c92' }
+        });
         const assetJson = await assetResponse.json();
 
         if (assetResponse.ok)
