@@ -11,7 +11,12 @@ const config = {
 		preprocess({
 			postcss: true
 		})
-	]
+	],
+	vite: {
+		define: {
+			'process.env': process.env
+		},
+	},
 };
 
 export default config;
