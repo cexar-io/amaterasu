@@ -13,6 +13,9 @@
   function toggleShow() {
     show = !show;
   }
+
+  $: console.log(settings.owner.toLocaleLowerCase())
+  $: console.log(owner.address)
 </script>
 
 <div

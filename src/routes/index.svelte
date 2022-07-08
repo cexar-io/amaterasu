@@ -41,7 +41,7 @@
     if (response.ok) {
       json.assets.map(async asset => {
         const assetResponse = await fetch(`${settings.api}/asset/${settings.asset}/${asset.token_id}/`, {
-          headers: { 'x-api-key': 'b959e0131e524da7a64e8e034ab46c92' }
+          headers: { 'x-api-key': settings.apiKey }
         });
         const assetJson = await assetResponse.json();
 
