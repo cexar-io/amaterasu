@@ -1,6 +1,7 @@
 <script>
   import { fade } from 'svelte/transition';
   import { settings } from '$lib/utilities/settings';
+  import { goto } from '$app/navigation';
 
   export let image_original_url = '';
   export let collection = {};
@@ -13,16 +14,14 @@
   function toggleShow() {
     show = !show;
   }
-
-  $: console.log(settings.owner.toLocaleLowerCase())
-  $: console.log(owner.address)
 </script>
 
 <div
   class="relative w-full"
   style="background:rgb(10 10 13)"
   on:mouseenter={toggleShow}
-  on:mouseleave={toggleShow}>
+  on:mouseleave={toggleShow}
+  on:click={() => { goto(permalink) }}>
   {#if owner.address !== settings.owner.toLocaleLowerCase()}
     <div class="absolute bg-white/3 backdrop-blur-lg w-full py-1 font-gotham-thin uppercase text-center top-1/2 z-30">
       vendido

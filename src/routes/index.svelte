@@ -28,11 +28,6 @@
   });
 
   async function getAssets() {
-    // let headers = {};
-
-    // if (settings.apiKey)
-    //   headers = { 'x-api-key': settings.apiKey }
-
     const response = await fetch(`${settings.api}/assets?asset_contract_address=${settings.asset}&limit=50&order_direction=desc&offset=0&include_orders=false`, {
 			headers: { 'x-api-key': settings.apiKey }
     });
