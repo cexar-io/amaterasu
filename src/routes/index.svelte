@@ -121,7 +121,7 @@
             </li>
           </ul>
           <h2 class="mb-3">Como ser miembro</h2>
-          <p class="text-sm leading-7">Para la membresía tradicional, podes ingresar a este link y probar tu suerte. Para la membresía DEFI, vamos a habilitar NFTs periódicamente para que futuros miembros puedan adquirirlas.</p>
+          <p class="text-sm leading-7">Para la membresía tradicional, podes ingresar a <a href="https://amaterasuba.com/" target="_blank" class="underline">este link</a> y probar tu suerte. Para la membresía DEFI, vamos a habilitar NFTs periódicamente para que futuros miembros puedan adquirirlas.</p>
         </div>
       </div>
     </section>
